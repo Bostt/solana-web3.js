@@ -1,5 +1,25 @@
 # @solana/transaction-confirmation
 
+## 2.1.1
+
+### Patch Changes
+
+- [#409](https://github.com/anza-xyz/kit/pull/409) [`24a329d`](https://github.com/anza-xyz/kit/commit/24a329dda1434aaf450d1d35b022ee77556ac415) Thanks [@mcintyre94](https://github.com/mcintyre94)! - Loosen lifetime constraint on sendAndConfirmTransaction to only require lastValidBlockHeight
+
+- [#236](https://github.com/anza-xyz/kit/pull/236) [`ca1d4ec`](https://github.com/anza-xyz/kit/commit/ca1d4ec7ddd641ca813f79f8ca06d225f29419e2) Thanks [@steveluscher](https://github.com/steveluscher)! - The minimum TypeScript version is now 5.3.3
+
+- Updated dependencies [[`41b679c`](https://github.com/anza-xyz/kit/commit/41b679c2646029c9c7f005de55fba687e3c89e8a), [`41b679c`](https://github.com/anza-xyz/kit/commit/41b679c2646029c9c7f005de55fba687e3c89e8a), [`776e18d`](https://github.com/anza-xyz/kit/commit/776e18d75c759a839608069c61da3f70b775540b), [`ca1d4ec`](https://github.com/anza-xyz/kit/commit/ca1d4ec7ddd641ca813f79f8ca06d225f29419e2)]:
+    - @solana/rpc-types@2.1.1
+    - @solana/transaction-messages@2.1.1
+    - @solana/rpc-subscriptions@2.1.1
+    - @solana/codecs-strings@2.1.1
+    - @solana/transactions@2.1.1
+    - @solana/addresses@2.1.1
+    - @solana/promises@2.1.1
+    - @solana/errors@2.1.1
+    - @solana/keys@2.1.1
+    - @solana/rpc@2.1.1
+
 ## 2.1.0
 
 ### Patch Changes

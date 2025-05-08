@@ -1,5 +1,17 @@
 # @solana/rpc-graphql
 
+## 2.1.1
+
+### Patch Changes
+
+- [#433](https://github.com/anza-xyz/kit/pull/433) [`41b679c`](https://github.com/anza-xyz/kit/commit/41b679c2646029c9c7f005de55fba687e3c89e8a) Thanks [@steveluscher](https://github.com/steveluscher)! - Corrected a misspelling of `readonlyIndexes` in the `AddressLookupTable` type. This fixes the return type of the `getTransaction` RPC call.
+
+- [#236](https://github.com/anza-xyz/kit/pull/236) [`ca1d4ec`](https://github.com/anza-xyz/kit/commit/ca1d4ec7ddd641ca813f79f8ca06d225f29419e2) Thanks [@steveluscher](https://github.com/steveluscher)! - The minimum TypeScript version is now 5.3.3
+
+- Updated dependencies [[`ca1d4ec`](https://github.com/anza-xyz/kit/commit/ca1d4ec7ddd641ca813f79f8ca06d225f29419e2)]:
+    - @solana/fast-stable-stringify@2.1.1
+    - @solana/codecs-strings@2.1.1
+
 ## 2.1.0
 
 ### Patch Changes
