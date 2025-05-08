@@ -1,5 +1,25 @@
 # @solana/transaction-messages
 
+## 2.1.1
+
+### Patch Changes
+
+- [#433](https://github.com/anza-xyz/kit/pull/433) [`41b679c`](https://github.com/anza-xyz/kit/commit/41b679c2646029c9c7f005de55fba687e3c89e8a) Thanks [@steveluscher](https://github.com/steveluscher)! - Deprecated the `writableIndices`/`readableIndices` spellings in transaction messages in favour of `readonlyIndexes`/`writableIndexes`. This will make this shape compatible with the output of the `getTransaction` API that uses those spellings for address lookup table data.
+
+- [#193](https://github.com/anza-xyz/kit/pull/193) [`776e18d`](https://github.com/anza-xyz/kit/commit/776e18d75c759a839608069c61da3f70b775540b) Thanks [@mcintyre94](https://github.com/mcintyre94)! - Strip the TransactionMessageWithDurableNonceLifetime type when prepending instructions to a TransactionMessage
+
+- [#236](https://github.com/anza-xyz/kit/pull/236) [`ca1d4ec`](https://github.com/anza-xyz/kit/commit/ca1d4ec7ddd641ca813f79f8ca06d225f29419e2) Thanks [@steveluscher](https://github.com/steveluscher)! - The minimum TypeScript version is now 5.3.3
+
+- Updated dependencies [[`41b679c`](https://github.com/anza-xyz/kit/commit/41b679c2646029c9c7f005de55fba687e3c89e8a), [`ca1d4ec`](https://github.com/anza-xyz/kit/commit/ca1d4ec7ddd641ca813f79f8ca06d225f29419e2)]:
+    - @solana/rpc-types@2.1.1
+    - @solana/codecs-data-structures@2.1.1
+    - @solana/codecs-numbers@2.1.1
+    - @solana/instructions@2.1.1
+    - @solana/codecs-core@2.1.1
+    - @solana/functional@2.1.1
+    - @solana/addresses@2.1.1
+    - @solana/errors@2.1.1
+
 ## 2.1.0
 
 ### Patch Changes

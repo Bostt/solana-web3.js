@@ -1,5 +1,33 @@
 # @solana/web3.js
 
+## 2.1.1
+
+### Patch Changes
+
+- [#409](https://github.com/anza-xyz/kit/pull/409) [`24a329d`](https://github.com/anza-xyz/kit/commit/24a329dda1434aaf450d1d35b022ee77556ac415) Thanks [@mcintyre94](https://github.com/mcintyre94)! - Loosen lifetime constraint on sendAndConfirmTransaction to only require lastValidBlockHeight
+
+- [#236](https://github.com/anza-xyz/kit/pull/236) [`ca1d4ec`](https://github.com/anza-xyz/kit/commit/ca1d4ec7ddd641ca813f79f8ca06d225f29419e2) Thanks [@steveluscher](https://github.com/steveluscher)! - The minimum TypeScript version is now 5.3.3
+
+- Updated dependencies [[`2fb1fbc`](https://github.com/anza-xyz/kit/commit/2fb1fbcf06b12f3f892776e89d2ee32797d032a3), [`41b679c`](https://github.com/anza-xyz/kit/commit/41b679c2646029c9c7f005de55fba687e3c89e8a), [`24a329d`](https://github.com/anza-xyz/kit/commit/24a329dda1434aaf450d1d35b022ee77556ac415), [`41b679c`](https://github.com/anza-xyz/kit/commit/41b679c2646029c9c7f005de55fba687e3c89e8a), [`e143797`](https://github.com/anza-xyz/kit/commit/e1437975c60b9fe1beaabb45d513a840000b25a3), [`776e18d`](https://github.com/anza-xyz/kit/commit/776e18d75c759a839608069c61da3f70b775540b), [`ca1d4ec`](https://github.com/anza-xyz/kit/commit/ca1d4ec7ddd641ca813f79f8ca06d225f29419e2)]:
+    - @solana/sysvars@2.1.1
+    - @solana/rpc-types@2.1.1
+    - @solana/transaction-confirmation@2.1.1
+    - @solana/transaction-messages@2.1.1
+    - @solana/rpc-subscriptions@2.1.1
+    - @solana/rpc-parsed-types@2.1.1
+    - @solana/rpc-spec-types@2.1.1
+    - @solana/instructions@2.1.1
+    - @solana/transactions@2.1.1
+    - @solana/functional@2.1.1
+    - @solana/addresses@2.1.1
+    - @solana/accounts@2.1.1
+    - @solana/programs@2.1.1
+    - @solana/signers@2.1.1
+    - @solana/codecs@2.1.1
+    - @solana/errors@2.1.1
+    - @solana/keys@2.1.1
+    - @solana/rpc@2.1.1
+
 ## 2.1.0
 
 ### Patch Changes
