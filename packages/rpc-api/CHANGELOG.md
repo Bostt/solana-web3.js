@@ -1,5 +1,22 @@
 # @solana/rpc-api
 
+## 5.5.0
+
+### Patch Changes
+
+- Updated dependencies [[`1cc0a31`](https://github.com/anza-xyz/kit/commit/1cc0a3163cf884a715aef5ba336adfd980dabfa6), [`6af7c15`](https://github.com/anza-xyz/kit/commit/6af7c156a9cd196d0d5ecb374fe696ec659756bf)]:
+    - @solana/errors@5.5.0
+    - @solana/addresses@5.5.0
+    - @solana/codecs-core@5.5.0
+    - @solana/codecs-strings@5.5.0
+    - @solana/keys@5.5.0
+    - @solana/rpc-spec@5.5.0
+    - @solana/rpc-transformers@5.5.0
+    - @solana/rpc-types@5.5.0
+    - @solana/transaction-messages@5.5.0
+    - @solana/transactions@5.5.0
+    - @solana/rpc-parsed-types@5.5.0
+
 ## 5.4.0
 
 ### Patch Changes
