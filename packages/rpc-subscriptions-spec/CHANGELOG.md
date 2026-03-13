@@ -1,5 +1,15 @@
 # @solana/rpc-subscriptions-spec
 
+## 6.3.2
+
+### Patch Changes
+
+- Updated dependencies []:
+    - @solana/errors@6.3.2
+    - @solana/promises@6.3.2
+    - @solana/rpc-spec-types@6.3.2
+    - @solana/subscribable@6.3.2
+
 ## 6.3.1
 
 ### Patch Changes
