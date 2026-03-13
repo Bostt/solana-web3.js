@@ -1,5 +1,37 @@
 # @solana/kit
 
+## 6.3.2
+
+### Patch Changes
+
+- [#1468](https://github.com/anza-xyz/kit/pull/1468) [`304436f`](https://github.com/anza-xyz/kit/commit/304436ffaad6812ee0cc2f67b5a881f7f918b3ae) Thanks [@amilz](https://github.com/amilz)! - Include source files in published packages so IDE "Go to Definition" navigates to TypeScript source instead of .d.ts type declarations
+
+- Updated dependencies [[`896412d`](https://github.com/anza-xyz/kit/commit/896412da20ced2b81f9f529e9b5feef16b7e790f)]:
+    - @solana/instruction-plans@6.3.2
+    - @solana/accounts@6.3.2
+    - @solana/addresses@6.3.2
+    - @solana/codecs@6.3.2
+    - @solana/instructions@6.3.2
+    - @solana/keys@6.3.2
+    - @solana/offchain-messages@6.3.2
+    - @solana/program-client-core@6.3.2
+    - @solana/rpc-api@6.3.2
+    - @solana/rpc-types@6.3.2
+    - @solana/signers@6.3.2
+    - @solana/sysvars@6.3.2
+    - @solana/transaction-confirmation@6.3.2
+    - @solana/transaction-messages@6.3.2
+    - @solana/transactions@6.3.2
+    - @solana/plugin-interfaces@6.3.2
+    - @solana/programs@6.3.2
+    - @solana/rpc-parsed-types@6.3.2
+    - @solana/rpc-subscriptions@6.3.2
+    - @solana/rpc@6.3.2
+    - @solana/errors@6.3.2
+    - @solana/functional@6.3.2
+    - @solana/plugin-core@6.3.2
+    - @solana/rpc-spec-types@6.3.2
+
 ## 6.3.1
 
 ### Patch Changes

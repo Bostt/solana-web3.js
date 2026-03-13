@@ -1,5 +1,20 @@
 # @solana/transaction-messages
 
+## 6.3.2
+
+### Patch Changes
+
+- Updated dependencies [[`27c3975`](https://github.com/anza-xyz/kit/commit/27c39755f5185e09a194c0b22eac4286f14c552c)]:
+    - @solana/codecs-core@6.3.2
+    - @solana/addresses@6.3.2
+    - @solana/codecs-data-structures@6.3.2
+    - @solana/codecs-numbers@6.3.2
+    - @solana/instructions@6.3.2
+    - @solana/rpc-types@6.3.2
+    - @solana/errors@6.3.2
+    - @solana/functional@6.3.2
+    - @solana/nominal-types@6.3.2
+
 ## 6.3.1
 
 ### Patch Changes
