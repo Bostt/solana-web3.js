@@ -1,5 +1,60 @@
 # @solana/kit
 
+## 8.0.0
+
+### Minor Changes
+
+- [#1811](https://github.com/anza-xyz/kit/pull/1811) [`7022c26`](https://github.com/anza-xyz/kit/commit/7022c262ba75bdd243c148c4f0759c2546159b6f) Thanks [@mcintyre94](https://github.com/mcintyre94)! - Add `bridgeStoreToAsyncIterable` to `@solana/subscribable`
+
+    `bridgeStoreToAsyncIterable` adapts a `ReactiveStreamStore` into the pull-based `AsyncIterable` contract that consumers like TanStack Query's `experimental_streamedQuery` expect. It is now a public export of `@solana/subscribable` (and re-exported from `@solana/kit`). It was previously an internal helper of `@solana/react`, but it is not React- or TanStack-specific and is useful to any consumer that needs to drive a stream store by `for await`-ing it.
+
+    The bridge only observes the store — consistent with the rest of the ecosystem, the caller owns the store's lifecycle (`connect()` it yourself, bound to the same signal, and `reset()` it when done). The bridge subscribes, seeds from the store's current snapshot, yields values, and unsubscribes when iteration ends.
+
+    It throws the new `SOLANA_ERROR__SUBSCRIBABLE__STREAM_CLOSED_WITHOUT_ERROR` when a store closes in an error state with a nullish payload. This is the error `useSubscriptionQuery` and `useTrackedDataQuery` now surface in that case; the SWR bridge is unaffected.
+
+- [#1824](https://github.com/anza-xyz/kit/pull/1824) [`b47feb6`](https://github.com/anza-xyz/kit/commit/b47feb626ceae978fa439a467a861ec42f5ad328) Thanks [@mcintyre94](https://github.com/mcintyre94)! - Re-export `@solana/promises` from `@solana/kit`
+
+    `@solana/kit` now re-exports the `@solana/promises` package, so its helpers — `isAbortError`, `getAbortablePromise`, and `safeRace` — are available directly from `@solana/kit` without a separate dependency. This is particularly useful alongside `@solana/react`'s `useAction`, whose superseded or aborted dispatches reject with an `AbortError` that callers filter using `isAbortError`.
+
+### Patch Changes
+
+- [#1883](https://github.com/anza-xyz/kit/pull/1883) [`a900eeb`](https://github.com/anza-xyz/kit/commit/a900eeb1fa888d79fc0a8e90cbca93efc3ba99c4) Thanks [@mcintyre94](https://github.com/mcintyre94)! - Fix `withCleanup` throwing `DisposableStack is not defined` on Safari
+
+    `withCleanup` constructed a `DisposableStack` unconditionally, but Safari has not shipped explicit resource management — as of Safari 27 it provides neither `DisposableStack` nor `Symbol.dispose` — so any plugin that registers a cleanup function threw `ReferenceError: Can't find variable: DisposableStack` while the client was being built.
+
+    The runtime's own `DisposableStack` is still used whenever it exists. Only where it is missing does `withCleanup` fall back to an internal stack that reproduces the behaviour it depends on. The `withCleanup` test suite now runs twice, once against each stack, so the two cannot drift apart.
+
+    Note that this fixes disposal on Safari but not `using` declarations in your own code, which additionally need a `Symbol.dispose` polyfill; disposing a client explicitly works either way.
+
+- Updated dependencies [[`7022c26`](https://github.com/anza-xyz/kit/commit/7022c262ba75bdd243c148c4f0759c2546159b6f), [`c45d5e0`](https://github.com/anza-xyz/kit/commit/c45d5e0e1deef45bde74f4fdfc2a9322c6079201), [`c8235ca`](https://github.com/anza-xyz/kit/commit/c8235ca25a093467a24058c188d734725d2cdea0), [`327760c`](https://github.com/anza-xyz/kit/commit/327760c101bf4bebd8602581ad4894aa6ff9c731), [`14a3e5b`](https://github.com/anza-xyz/kit/commit/14a3e5b600e6a034749616fb25f762aed01a7a43), [`a900eeb`](https://github.com/anza-xyz/kit/commit/a900eeb1fa888d79fc0a8e90cbca93efc3ba99c4), [`aa0b625`](https://github.com/anza-xyz/kit/commit/aa0b625e04884ea17a0f06c59168e8b14169cad1)]:
+    - @solana/subscribable@8.0.0
+    - @solana/errors@8.0.0
+    - @solana/transaction-introspection@8.0.0
+    - @solana/rpc-api@8.0.0
+    - @solana/transaction-messages@8.0.0
+    - @solana/offchain-messages@8.0.0
+    - @solana/plugin-core@8.0.0
+    - @solana/plugin-interfaces@8.0.0
+    - @solana/rpc-subscriptions@8.0.0
+    - @solana/accounts@8.0.0
+    - @solana/addresses@8.0.0
+    - @solana/instruction-plans@8.0.0
+    - @solana/instructions@8.0.0
+    - @solana/keys@8.0.0
+    - @solana/program-client-core@8.0.0
+    - @solana/programs@8.0.0
+    - @solana/rpc@8.0.0
+    - @solana/rpc-spec-types@8.0.0
+    - @solana/rpc-types@8.0.0
+    - @solana/signers@8.0.0
+    - @solana/sysvars@8.0.0
+    - @solana/transaction-confirmation@8.0.0
+    - @solana/transactions@8.0.0
+    - @solana/codecs@8.0.0
+    - @solana/rpc-parsed-types@8.0.0
+    - @solana/functional@8.0.0
+    - @solana/promises@8.0.0
+
 ## 7.0.0
 
 ### Major Changes

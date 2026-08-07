@@ -1,5 +1,28 @@
 # @solana/rpc-api
 
+## 8.0.0
+
+### Minor Changes
+
+- [#1776](https://github.com/anza-xyz/kit/pull/1776) [`c8235ca`](https://github.com/anza-xyz/kit/commit/c8235ca25a093467a24058c188d734725d2cdea0) Thanks [@mcintyre94](https://github.com/mcintyre94)! - Add the `getTransactionsForAddress` RPC method type. This method combines address-history discovery and per-transaction fetching into a single query, with server-side filtering, bidirectional sorting, and cursor-based pagination. It will be part of the upcoming solana-rpc spec and is part of the `solana-rpc/superbank` project, and is already available from major RPC providers.
+
+    It supports both `signatures` and `full` (`json`/`jsonParsed`/`base58`/`base64`) response modes. The shared transaction metadata types also gain an optional `meta.costUnits` field, which surfaces on `getTransaction` as well.
+
+### Patch Changes
+
+- Updated dependencies [[`7022c26`](https://github.com/anza-xyz/kit/commit/7022c262ba75bdd243c148c4f0759c2546159b6f), [`327760c`](https://github.com/anza-xyz/kit/commit/327760c101bf4bebd8602581ad4894aa6ff9c731), [`14a3e5b`](https://github.com/anza-xyz/kit/commit/14a3e5b600e6a034749616fb25f762aed01a7a43)]:
+    - @solana/errors@8.0.0
+    - @solana/transaction-messages@8.0.0
+    - @solana/rpc-spec@8.0.0
+    - @solana/addresses@8.0.0
+    - @solana/codecs-core@8.0.0
+    - @solana/codecs-strings@8.0.0
+    - @solana/keys@8.0.0
+    - @solana/rpc-transformers@8.0.0
+    - @solana/rpc-types@8.0.0
+    - @solana/transactions@8.0.0
+    - @solana/rpc-parsed-types@8.0.0
+
 ## 7.0.0
 
 ### Major Changes
